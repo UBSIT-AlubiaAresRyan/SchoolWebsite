@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Don Bosco JHS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+<style>
+    :root{
+  --color-1: rgba(211, 177, 147, 0.952);
+}
+body{
+	line-height: 1.5;
+	font-family: sans-serif;
+	background-color: rgba(211, 177, 147, 0.952);
+}
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+/*header*/
+.header{
+	background-color: var(--color-1);
+	padding:12px 0;
+	position: relative;
+}
+.header .logo,
+.header .nav{
+	padding:0 15px;
+}
+.header .logo a{
+	font-size: 30px;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header .nav ul li a{
+	display: block;
+	font-size: 16px;
+	padding:10px 0;
+	color: rgba(255,255,255,0.7);
+	text-transform: capitalize;
+	transition: all 0.5s ease;
+}
+.header .nav ul li a:hover,
+.header .nav ul li a.active{
+	color: #ffffff;
+}
+.header #nav-check{
+	position: absolute;
+	opacity:0;
+	pointer-events: none;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+.nav-toggler span{
+	display: block;
+	height: 2px;
+	width: 20px;
+	background-color: var(--color-1);
+	position: relative;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: var(--color-1);
+   left:0;
+}
+.nav-toggler span::before{
+	top: -6px;
+}
+.nav-toggler span::after{
+	top: 6px;
+}
+@media(max-width: 991px){
+    .nav-toggler{
+    	display: flex;
+    }
+    .header .nav{
+    	position: absolute;
+    	left:0;
+    	top:100%;
+    	width: 100%;
+    	background-color: var(--color-1);
+    	border-top: 1px solid rgba(255,255,255,0.2);
+    	opacity:0;
+    	visibility: hidden;
+    }
+    .header .nav ul li{
+    	display: block;
+    	margin:0;
+    }
+    .header #nav-check:checked ~ .nav{
+       opacity: 1;
+       visibility: visible;
+    }
+    .header #nav-check:focus ~ .nav-toggler{
+    	box-shadow: 0 0 15px #000000;
+    }
+    .header #nav-check:checked ~ .nav-toggler span{
+    	background-color: transparent;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::before{
+    	top:0;
+    	transform: rotate(45deg);
+    }
+    .header #nav-check:checked ~ .nav-toggler span::after{
+    	top:0;
+    	transform: rotate(-45deg);
+    }
+}
+
+
+
+</style>
+
+ <header class="header">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+           <div class="logo">
+			<a href="#">Don Bosco JHS</a>
+           </div>
+           <input type="checkbox" id="nav-check">
+           <label for="nav-check" class="nav-toggler">
+              <span></span>
+           </label>
+           <nav class="nav">
+              <ul>
+                 <li><a href="index.html" class="active">home</a></li>
+                 <li><a href="about.html">about</a></li>
+                 <li><a href="events.html">events</a></li>
+                 <li><a href="gallery.html">gallery</a></li>
+                 <li><a href="contact.html">contact</a></li>
+              </ul>
+           </nav>
+        </div>
+    </div>
+ </header>
+
+ <div class="about-section">
+	<h1>About Saint John Bosco</h1>
+	<p>January 31 is the day that the Catholic Church honors St. John Bosco, an Italian Catholic Priest who helped the young and marginalized</p>
+	<p>respond to their need for education, work-related problems and spiritual formation. John Bosco was born into a poor family of peasant</p>
+	<p>farmers on August 16, 1815 in Becchi, a quiet village close to Castelnuovo d’Asti (today Castelnuovo Don Bosco) in Northern Italy. He</p>
+	<p>was born right after the end of Napoleonic war which left the country ravaged and in chaos. There was also drought and famine at </p>
+	<p> John and the time of his birth. John was just two years old when he lost his father, leaving his mother to raise three boys all by herself. Little </p>
+	<p>his older brother Joseph, together with their stepbrother Anthony tackled the endless hard work in the farm. Mama Margaret as she was</p>
+	<p>fondly called by the neighbors, made a strong impact in the life of John. She was a woman of character who taught her children the value</p>
+	<p>of work and that it would be easier if done cheerfully. Despite their poverty, his mother could still share some food with the homeless who</p>
+	<p>came asking for food and shelter. With firm kindness and boundless faith, taught her children the value of work and that it would be</p>
+	<p>easier if done cheerfully. Despite their poverty, his mother could still share some food with the homeless who came asking for food and</p>
+	<p>shelter. With firm kindness and boundless faith, Margaret taught them lessons in upright living, determination and fear of God, which</p>
+	<p>she taught by example. John attended church and became a devout Catholic because of his mother. For John, praying was a means of</p>
+	<p>talking with God anywhere even if he was herding the cattle.When he was nine, he had a dream that changed his life forever. In his </p>
+	<p>dream, he saw a number of unruly boys who swore while they played. Then a majestic man and woman appeared before him. The man</p>
+	<p>told him, “You will have to win these boys not with your blows but with gentleness and kindness.” Then the lady told him to be humble,</p>
+	<p>steadfast and strong. And that he will understand everything when the time comes.This dream helped John discern his true calling, to be</p>
+	<p>a priest. John entertained his peers with juggling, acrobatics and magic tricks before explaining a sermon he had heard or leading them</p>
+	<p>in praying the rosary. His brother Anthony was very much against his studying so he left home to work in Moglia farm at the age of 12.</p>
+	<p>For two years, John worked in the farm until his uncle took him back to Becchi when Fr. Calosso offered to help him study. But that</p>
+	<p>didn’t last long because the priest died. Johnny was 16 when he decided to continue his studies. He stayed in the house of a tailor and</p>
+	<p>learned the trade. He then moved to Chieri where he spent ten hard years learning different trades in order to provide for himself. Here,</p>
+	<p>he met Luigi Comollo who became his closest friend and Giona, a Jew.</p>
+
+  </div>
+  
+  <h2 style="text-align:center">
+	</h2>
+	<br>
+  <div class="row">
+	<div class="column">
+	  <div class="card">
+		<div class="container">
+			<br>
+			<br>
+			<br>
+		  	<br>
+		 	<br>
+			 <br>
+			<h2>Our Vision</h2>
+		 
+		  <p> Life Transforming and</p>
+		  <p>Christ's Disiple-Forming</p>
+		  <p>Chatholic Educational</p>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  
+		  
+		  
+		 
+		 
+		</div>
+	  </div>
+	</div>
+  
+	<div class="column">
+	  <div class="card">
+		<div class="container">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>Our Mission</h2>
+		 
+		  <p>Setting the school as an effective instrument of Chatholic Evangelation</p>
+		  <p>Practicing a participative and empowering school leadership</p>
+		  <p>Promoting excelent academic program and</p>
+		  <p>Nurturing a culture of dialogue and collaboration</p>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  
+		 
+	
+		</div>
+	  </div>
+	</div>
+  
+	<div class="column">
+	  <div class="card">
+		<div class="container">
+			<br>
+			<br>
+		  <h2>Our Objective</h2>
+		
+		  <p>Create a Don Bosco Community and</p>
+		  <p> environment witnessing to the Christian Faith.</p>
+		  <p>Sustain a holistic professional human and </p>
+		  <p>spiritual development program</p>
+		  <p>Implement policies and procedures reflective </p>
+		  <p>of the Gospel Values</p>
+		  <p>Nurture a mentoring enabling and</p>
+		  <p>empowering school environment</p>
+		  <p>Sustain a learner-centered instuction and</p>
+		  <p>Foster respect and appreciation for cultutal diversity</p>
+		<br>
+		<br>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+</body>
+</html>

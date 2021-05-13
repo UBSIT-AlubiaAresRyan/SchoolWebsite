@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Don Bosco JHS</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/events.css">
+</head>
+<body>
+<style>
+    :root{
+  --color-1: rgba(211, 177, 147, 0.952);
+}
+body{
+	line-height: 1.5;
+	font-family: sans-serif;
+	background-color: white;
+}
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+/*header*/
+.header{
+	background-color: var(--color-1);
+	padding:12px 0;
+	position: relative;
+}
+.header .logo,
+.header .nav{
+	padding:0 15px;
+}
+.header .logo a{
+	font-size: 30px;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header .nav ul li a{
+	display: block;
+	font-size: 16px;
+	padding:10px 0;
+	color: rgba(255,255,255,0.7);
+	text-transform: capitalize;
+	transition: all 0.5s ease;
+}
+.header .nav ul li a:hover,
+.header .nav ul li a.active{
+	color: #ffffff;
+}
+.header #nav-check{
+	position: absolute;
+	opacity:0;
+	pointer-events: none;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+.nav-toggler span{
+	display: block;
+	height: 2px;
+	width: 20px;
+	background-color: var(--color-1);
+	position: relative;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: var(--color-1);
+   left:0;
+}
+.nav-toggler span::before{
+	top: -6px;
+}
+.nav-toggler span::after{
+	top: 6px;
+}
+@media(max-width: 991px){
+    .nav-toggler{
+    	display: flex;
+    }
+    .header .nav{
+    	position: absolute;
+    	left:0;
+    	top:100%;
+    	width: 100%;
+    	background-color: var(--color-1);
+    	border-top: 1px solid rgba(255,255,255,0.2);
+    	opacity:0;
+    	visibility: hidden;
+    }
+    .header .nav ul li{
+    	display: block;
+    	margin:0;
+    }
+    .header #nav-check:checked ~ .nav{
+       opacity: 1;
+       visibility: visible;
+    }
+    .header #nav-check:focus ~ .nav-toggler{
+    	box-shadow: 0 0 15px #000000;
+    }
+    .header #nav-check:checked ~ .nav-toggler span{
+    	background-color: transparent;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::before{
+    	top:0;
+    	transform: rotate(45deg);
+    }
+    .header #nav-check:checked ~ .nav-toggler span::after{
+    	top:0;
+    	transform: rotate(-45deg);
+    }
+}
+
+
+
+</style>
+
+ <header class="header">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+           <div class="logo">
+             <a href="#">Don Bosco JHS</a>
+           </div>
+           <input type="checkbox" id="nav-check">
+           <label for="nav-check" class="nav-toggler">
+              <span></span>
+           </label>
+           <nav class="nav">
+              <ul>
+                 <li><a href="index.html" class="active">home</a></li>
+                 <li><a href="about.html">about</a></li>
+                 <li><a href="events.html">events</a></li>
+                 <li><a href="gallery.html">gallery</a></li>
+                 <li><a href="contact.html">contact</a></li>
+              </ul>
+           </nav>
+        </div>
+    </div>
+ </header>
+
+ <div class="event">
+
+	<div class="header--text">
+		<br>
+		<br>
+		<br>
+		
+		<h2>  Events </h2>
+
+	</div>
+
+	<div class="event--section">
+
+		<div class="event--content">
+
+			<div class="event--img">
+
+				<img src="img/bully.jpg" alt="event photo">
+			</div>
+
+			<div class="content--text">
+
+				<div class="event--menu">
+
+					<h4> 29 Jan </h4>
+
+					<ul class="event--detail">
+
+						<li> <i class="fa fa-clock-o" aria-hidden="true"></i> <span> 8:00AM -5:00PM </span></li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i><span> 57 Manuel Roxas, Baguio, 2602 Benguet </span></li>
+					</ul>
+				</div>
+
+				<div class="event--text">
+
+					<h4> Anti-Bullying Month</h4>
+					<p> Though we may be apart this time since face to face classes are strictly prohibited,  
+						we are ONE in raising awareness and advocating for students
+						 
+				  
+					</p>
+
+				</div>
+
+				<div class="btn">
+
+					<a href="https://www.facebook.com/dbhs1952/posts/3025922064303221"> View Details </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="event--content">
+
+			<div class="event--img">
+
+				<img src="img/moving.jpg" alt="event photo">
+			</div>
+
+			<div class="content--text">
+
+				<div class="event--menu">
+
+					<h4> 10 July </h4>
+
+					<ul class="event--detail">
+
+						<li> <i class="fa fa-clock-o" aria-hidden="true"></i> <span> 8:00AM-12:00Pm </span></li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>57 Manuel Roxas, Baguio, 2602 Benguet </span></li>
+					</ul>
+				</div>
+
+				<div class="event--text">
+
+					<h4> 5th Moving up</h4>
+					<p>  
+						
+						5th Moving Up and Recognition Day
+					</p>
+
+				</div>
+
+				<div class="btn">
+
+					<a href="https://www.facebook.com/dbhs1952/photos/a.2839398992955530/2839474936281269/"> View Details </a>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+ <div class="event">
+
+	<div class="header--text">
+		<br>
+	
+		
+
+	</div>
+
+	<div class="event--section">
+
+		<div class="event--content">
+
+			<div class="event--img">
+
+				<img src="img/fest.jpg" alt="event photo">
+			</div>
+
+			<div class="content--text">
+
+				<div class="event--menu">
+
+					<h4> 01 Dec </h4>
+
+					<ul class="event--detail">
+
+						<li> <i class="fa fa-clock-o" aria-hidden="true"></i> <span> 8:00AM -9:00AM </span></li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i><span> 57 Manuel Roxas, Baguio, 2602 Benguet </span></li>
+					</ul>
+				</div>
+
+				<div class="event--text">
+
+					<h4> St. John Bosco Parish Fiesta </h4>
+					<p> ~Don Bosco School-based Fiesta
+						~Intrams/ Friendship games
+						~St. John Bosco Parish Fiesta
+						 
+				  
+					</p>
+
+				</div>
+
+				<div class="btn">
+
+					<a href="https://www.facebook.com/dbhs1952/photos/a.2695097417385689/2695178537377577/"> View Details </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="event--content">
+
+			<div class="event--img">
+
+				<img src="img/red.jpg" alt="event photo">
+			</div>
+
+			<div class="content--text">
+
+				<div class="event--menu">
+
+					<h4> 11 Dec </h4>
+
+					<ul class="event--detail">
+
+						<li> <i class="fa fa-clock-o" aria-hidden="true"></i> <span> 8:00AM </span></li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>57 Manuel Roxas, Baguio, 2602 Benguet </span></li>
+					</ul>
+				</div>
+
+				<div class="event--text">
+
+					<h4>  Red Wednesday</h4>
+					<p>  
+						
+						#RedWednesday at Don Bosco School of Baguio City, Inc. Junior High School Department.
+						The prayer was led by the School Wide Working Committee and coordinators.
+					</p>
+
+				</div>
+
+				<div class="btn">
+
+					<a href="https://www.facebook.com/dbhs1952/posts/2622228088005956"> View Details </a>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script src="https://use.fontawesome.com/e4dd7e3a17.js"></script>
+
+</body>
+</html>
